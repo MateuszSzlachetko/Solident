@@ -1,5 +1,5 @@
 import {afterNextRender, Injectable} from '@angular/core';
-import {Theme, themes} from "../interfaces/theme.interface";
+import {Theme, themes} from "../interfaces/theme";
 import {BehaviorSubject} from "rxjs";
 
 const HIGH_CONTRAST_CLASS_NAME: string = 'contrast-mode'
