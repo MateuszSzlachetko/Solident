@@ -2,7 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {AsyncPipe, CommonModule, NgClass, NgIf, NgOptimizedImage} from "@angular/common";
 import {ThemeService} from "../../core/services/theme.service";
-import {Theme} from "../../core/interfaces/theme.interface";
+import {Theme} from "../../core/interfaces/theme";
 import {Observable} from "rxjs";
 import {BreakpointObserver, Breakpoints, BreakpointState} from "@angular/cdk/layout";
 import {animate, state, style, transition, trigger} from "@angular/animations";
