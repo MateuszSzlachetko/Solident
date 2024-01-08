@@ -25,7 +25,6 @@
   font-size: 2rem;
   color: white;
   font-weight: 500;
-
 }
 
 .services {
@@ -39,7 +38,7 @@
   margin-top: 1rem;
   font-weight: 700;
   font-size: 2rem;
-  color:var(--primary);
+  color: var(--primary);
 }
 
 .services__paragraph {
@@ -48,6 +47,6 @@
   color: var(--text);
 }
 
-
-
-
+.services__offer-card {
+  padding: 1rem;
+}

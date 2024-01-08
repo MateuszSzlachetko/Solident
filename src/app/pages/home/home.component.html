@@ -1,17 +1,29 @@
 <div class="welcome">
-  <img ngSrc="assets/a.jpg"
-       ngSrcset="500w, 1000w"
-       fill
-       priority
-       sizes="100vw"
-       class="welcome__background"
-       alt="Główne zdjęcie powitalne">
+  <img
+    ngSrc="assets/a.jpg"
+    ngSrcset="500w, 1000w"
+    fill
+    priority
+    sizes="100vw"
+    class="welcome__background"
+    alt="Główne zdjęcie powitalne"
+  />
   <h1 class="welcome__header">Solident</h1>
   <p class="welcome__slogan">Uśmiech, który zachwyca – nasza specjalność!</p>
 </div>
 <div class="services">
   <h2 class="services__header">Nasza oferta</h2>
-  <p class="services__paragraph">
-
-  </p>
+  <p class="services__paragraph"></p>
+  @for (offer of offers; track offer.title) {
+    <div class="services__offer-card">
+      <app-offer-card
+        [iconSrc]="offer.iconSrc"
+        [title]="offer.title"
+        [content]="offer.content"
+        [redirectTo]="offer.redirectTo"
+        [even]="$odd"
+      >
+      </app-offer-card>
+    </div>
+  }
 </div>

@@ -8,12 +8,13 @@ $navbar-height: 60px;
   justify-content: space-between;
   height: $navbar-height;
   padding: 0.5rem 1rem;
-  background-color:rgba(var(--navbar));
+  background-color: rgba(var(--navbar));
   color: var(--text);
   border-bottom-style: solid;
   border-bottom-width: 0.8px;
   border-bottom-color: rgba(var(--text-rgb), 0.2);
   font-weight: 500;
+  z-index: 1;
 }
 
 .navbar-top__logo {
@@ -120,13 +121,13 @@ $navbar-height: 60px;
   display: none;
 }
 
-.navbar-top__burger-menu.show-menu span:nth-child(1){
-  translate:0 1px;
+.navbar-top__burger-menu.show-menu span:nth-child(1) {
+  translate: 0 1px;
   rotate: 45deg;
 }
 
 .navbar-top__burger-menu.show-menu span:nth-child(3) {
-  translate:0 -1px;
+  translate: 0 -1px;
   rotate: -45deg;
 }
 
@@ -185,8 +186,7 @@ $navbar-height: 60px;
     display: none;
   }
 
-  .navbar-top__settings-menu{
+  .navbar-top__settings-menu {
     display: none;
   }
 }
-
