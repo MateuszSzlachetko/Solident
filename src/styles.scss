@@ -4,38 +4,50 @@ html {
 
 .light-mode {
   --text: #0f0f0f;
-  --text-rgb: 15,15,15;
+  --text-inverse: #ffffff;
+  --text-rgb: 15, 15, 15;
   --background: #ffffff;
-  --navbar: 246,246,246,0.95;
-  --primary:#155630;
-  --secondary:#d8e4dd;
+  --background-inverse: #5b8358;
+  --navbar: 246, 246, 246, 0.95;
+  --primary: #155630;
+  --secondary: #d8e4dd;
   --accent: #c20003;
+  --accent-inverse: #ffbcb1;
   --contrast: #232323;
-  --logo: invert(24%) sepia(6%) saturate(4927%) hue-rotate(92deg) brightness(106%) contrast(94%);
+  --logo: invert(24%) sepia(6%) saturate(4927%) hue-rotate(92deg)
+    brightness(106%) contrast(94%);
+  --logo-inverse: invert(100%) sepia(0%) saturate(0%) hue-rotate(218deg)
+    brightness(108%) contrast(105%);
 }
 
 .dark-mode {
   --text: #f0f0f0;
-  --text-rgb: 240,240,240;
+  --text-inverse: #000000;
+  --text-rgb: 240, 240, 240;
   --background: #000000;
-  --navbar: 9,9,9,0.95;
-  --primary:#a9eac4;
-  --secondary:#1b2720;
+  --background-inverse: #f0f0f0;
+  --navbar: 9, 9, 9, 0.95;
+  --primary: #a9eac4;
+  --secondary: #1b2720;
   --accent: #ff3d40;
   --contrast: #ffffff;
-  --logo: invert(92%) sepia(10%) saturate(1015%) hue-rotate(82deg) brightness(98%) contrast(87%);
+  --logo: invert(92%) sepia(10%) saturate(1015%) hue-rotate(82deg)
+    brightness(98%) contrast(87%);
 }
 
 .contrast-mode {
   --text: #ffff00;
-  --text-rgb: 255,255,0;
+  --text-inverse: #ffff00;
+  --text-rgb: 255, 255, 0;
   --background: #000000;
-  --navbar: 9,9,9,0.95;
+  --background-inverse: #000000;
+  --navbar: 9, 9, 9, 0.95;
   --primary: #ffff00;
   --secondary: #ffff00;
   --accent: #ffff00;
   --contrast: #ffff00;
-  --logo: invert(75%) sepia(72%) saturate(1563%) hue-rotate(13deg) brightness(108%) contrast(100%);
+  --logo: invert(75%) sepia(72%) saturate(1563%) hue-rotate(13deg)
+    brightness(108%) contrast(100%);
 }
 
 *,
@@ -51,7 +63,8 @@ body {
   background-color: var(--background);
 }
 
-ul, li {
+ul,
+li {
   list-style-type: none;
 }
 
