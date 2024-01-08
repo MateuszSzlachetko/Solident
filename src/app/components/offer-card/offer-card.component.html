@@ -1,0 +1,12 @@
+<div class="offer-card" [ngClass]="even ? 'special' : ''">
+  <div class="offer-card__icon">
+    <img [ngSrc]="iconSrc" width="32" height="32" alt="" />
+  </div>
+  <h3 class="offer-card__title">
+    {{ title }}
+  </h3>
+  <p class="offer-card__content">
+    {{ content }}
+  </p>
+  <a class="offer-card__link" [routerLink]="redirectTo"> Dowiedz się więcej </a>
+</div>
