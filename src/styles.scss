@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+.light-mode {
+  --text: #0f0f0f;
+  --text-rgb: 15,15,15;
+  --background: #ffffff;
+  --navbar: 246,246,246,0.95;
+  --primary:#155630;
+  --secondary:#d8e4dd;
+  --accent: #c20003;
+  --contrast: #232323;
+  --logo: invert(24%) sepia(6%) saturate(4927%) hue-rotate(92deg) brightness(106%) contrast(94%);
+}
+
+.dark-mode {
+  --text: #f0f0f0;
+  --text-rgb: 240,240,240;
+  --background: #000000;
+  --navbar: 9,9,9,0.95;
+  --primary:#a9eac4;
+  --secondary:#1b2720;
+  --accent: #ff3d40;
+  --contrast: #ffffff;
+  --logo: invert(92%) sepia(10%) saturate(1015%) hue-rotate(82deg) brightness(98%) contrast(87%);
+}
+
+.contrast-mode {
+  --text: #ffff00;
+  --text-rgb: 255,255,0;
+  --background: #000000;
+  --navbar: 9,9,9,0.95;
+  --primary: #ffff00;
+  --secondary: #ffff00;
+  --accent: #ffff00;
+  --contrast: #ffff00;
+  --logo: invert(75%) sepia(72%) saturate(1563%) hue-rotate(13deg) brightness(108%) contrast(100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--background);
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
