@@ -1,0 +1,53 @@
+.welcome {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome__background {
+  object-fit: cover;
+  z-index: -1;
+  object-position: left;
+  filter: brightness(0.8);
+}
+
+.welcome__header {
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: white;
+}
+
+.welcome__slogan {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services__header {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color:var(--primary);
+}
+
+.services__paragraph {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+
+
+
