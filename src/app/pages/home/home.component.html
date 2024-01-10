@@ -14,16 +14,33 @@
 <div class="services">
   <h2 class="services__header">Nasza oferta</h2>
   <p class="services__paragraph"></p>
-  @for (offer of offers; track offer.title) {
-    <div class="services__offer-card">
-      <app-offer-card
-        [iconSrc]="offer.iconSrc"
-        [title]="offer.title"
-        [content]="offer.content"
-        [redirectTo]="offer.redirectTo"
-        [even]="$odd"
-      >
-      </app-offer-card>
-    </div>
-  }
+  <div class="services__offers">
+    @for (offer of dentistryOffers; track offer.title) {
+      <div class="offers__offer-card">
+        <app-offer-card
+          [iconSrc]="offer.iconSrc"
+          [title]="offer.title"
+          [content]="offer.content"
+          [redirectTo]="offer.redirectTo"
+          [even]="$odd"
+        >
+        </app-offer-card>
+      </div>
+    }
+  </div>
+  <h2 class="services__header">Medycyna estetyczna</h2>
+  <div class="services__offers">
+    @for (offer of aestheticMedicineOffers; track offer.title) {
+      <div class="offers__offer-card">
+        <app-offer-card
+          [iconSrc]="offer.iconSrc"
+          [title]="offer.title"
+          [content]="offer.content"
+          [redirectTo]="offer.redirectTo"
+          [even]="false"
+        >
+        </app-offer-card>
+      </div>
+    }
+  </div>
 </div>

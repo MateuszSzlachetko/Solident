@@ -42,3 +42,9 @@
 .offer-card.special .offer-card__link {
   color: var(--accent-inverse);
 }
+
+@media (min-width: 880px) {
+  .offer-card {
+    height: 100%;
+  }
+}

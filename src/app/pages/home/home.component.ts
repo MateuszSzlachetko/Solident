@@ -1,18 +1,24 @@
 import { ChangeDetectorRef, Component, inject, NgZone } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { OfferCardComponent } from '../../components/offer-card/offer-card.component';
-import { OfferInterface, SZ } from '../../core/interfaces/offer.interface';
+import {
+  OfferInterface,
+  OFFERS_AESTHETIC_MEDICINE,
+  OFFERS_DENTISTRY,
+} from '../../core/interfaces/offer.interface';
+import { GoogleMapComponent } from '../../components/google-map/google-map.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgOptimizedImage, OfferCardComponent],
+  imports: [NgOptimizedImage, OfferCardComponent, GoogleMapComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   welcomeImgSrc = 'assets/a.jpg';
-  offers: OfferInterface[] = [SZ];
+  dentistryOffers: OfferInterface[] = OFFERS_DENTISTRY;
+  aestheticMedicineOffers: OfferInterface[] = OFFERS_AESTHETIC_MEDICINE;
   i: number = 2;
   ngZone = inject(NgZone);
   cd = inject(ChangeDetectorRef);
