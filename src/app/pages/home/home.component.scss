@@ -57,11 +57,10 @@
 }
 
 .home__line {
-  display: block;
   align-self: center;
   width: 80%;
-  margin-top: 1.25rem;
-  border: 0.13rem solid rgb(0, 0, 0);
+  margin: 2rem 0;
+  border: 1px solid var(--text);
 }
 
 .home__contact {
@@ -74,6 +73,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 1rem;
 
   & > * {
     margin-top: 1rem;
