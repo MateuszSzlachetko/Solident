@@ -1,46 +1,78 @@
-<div class="welcome">
-  <img
-    ngSrc="assets/a.jpg"
-    ngSrcset="500w, 1000w"
-    fill
-    priority
-    sizes="100vw"
-    class="welcome__background"
-    alt="Główne zdjęcie powitalne"
-  />
-  <h1 class="welcome__header">Solident</h1>
-  <p class="welcome__slogan">Uśmiech, który zachwyca – nasza specjalność!</p>
-</div>
-<div class="services">
-  <h2 class="services__header">Nasza oferta</h2>
-  <p class="services__paragraph"></p>
-  <div class="services__offers">
-    @for (offer of dentistryOffers; track offer.title) {
-      <div class="offers__offer-card">
-        <app-offer-card
-          [iconSrc]="offer.iconSrc"
-          [title]="offer.title"
-          [content]="offer.content"
-          [redirectTo]="offer.redirectTo"
-          [even]="$odd"
-        >
-        </app-offer-card>
-      </div>
-    }
+<div class="home">
+  <div class="home__welcome">
+    <img
+      ngSrc="assets/a.jpg"
+      ngSrcset="500w, 1000w"
+      fill
+      priority
+      sizes="100vw"
+      class="welcome__background"
+      alt="Główne zdjęcie powitalne"
+    />
+    <h1 class="welcome__header">Solident</h1>
+    <p class="welcome__slogan">Uśmiech, który zachwyca – nasza specjalność!</p>
   </div>
-  <h2 class="services__header">Medycyna estetyczna</h2>
-  <div class="services__offers">
-    @for (offer of aestheticMedicineOffers; track offer.title) {
-      <div class="offers__offer-card">
-        <app-offer-card
-          [iconSrc]="offer.iconSrc"
-          [title]="offer.title"
-          [content]="offer.content"
-          [redirectTo]="offer.redirectTo"
-          [even]="false"
-        >
-        </app-offer-card>
-      </div>
-    }
+  <div class="home__services">
+    <h2 class="services__header">Nasza oferta</h2>
+    <p class="services__paragraph"></p>
+    <div class="services__offers">
+      @for (offer of dentistryOffers; track offer.title) {
+        <div class="offers__offer-card">
+          <app-offer-card
+            [iconSrc]="offer.iconSrc"
+            [title]="offer.title"
+            [content]="offer.content"
+            [redirectTo]="offer.redirectTo"
+            [even]="$odd"
+          >
+          </app-offer-card>
+        </div>
+      }
+    </div>
+    <h2 class="services__header">Medycyna estetyczna</h2>
+    <div class="services__offers">
+      @for (offer of aestheticMedicineOffers; track offer.title) {
+        <div class="offers__offer-card">
+          <app-offer-card
+            [iconSrc]="offer.iconSrc"
+            [title]="offer.title"
+            [content]="offer.content"
+            [redirectTo]="offer.redirectTo"
+            [even]="false"
+          >
+          </app-offer-card>
+        </div>
+      }
+    </div>
   </div>
+  <hr class="home__line" />
+  <section class="home__contact">
+    <div class="contact__info">
+      <h2 class="info__main-header">Kontakt</h2>
+      <p class="info__paragraph">
+        Zapraszamy do kontaktu, w celu umówienia wizyty, bądź znalezienia
+        odpowiedzi na nurtujące państwa pytania
+      </p>
+      <div class="info__adress">
+        <h3 class="info__header">Adres</h3>
+        <p class="info__line">Chabrów 58</p>
+        <p class="info__line">45-221 Opole</p>
+      </div>
+      <div class="info__opening-hours">
+        <h3 class="info__header">Godziny otwarcia</h3>
+        <p class="info__line">pon.-pt. 8:00 - 20:00</p>
+      </div>
+      <div class="info__phone-number">
+        <h3 class="info__header">Telefon</h3>
+        <a href="tel:+48-456-789-321" class="info__line">+48 456 789 321</a>
+      </div>
+      <div class="info__email">
+        <h3 class="info__header">E-mail</h3>
+        <p class="info__line">lorem.ipsum&#64;solident.pl</p>
+      </div>
+    </div>
+    <div class="contact__map">
+      <app-google-map></app-google-map>
+    </div>
+  </section>
 </div>
