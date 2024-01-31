@@ -9,8 +9,7 @@
     />
     Solident
   </a>
-
-  @if (!isMobileLayout) {
+  @if (isDesktopLayout) {
     <ul class="nav-item-group">
       <li class="nav-item">
         <a> Test </a>
@@ -19,7 +18,6 @@
         <a> Test </a>
       </li>
     </ul>
-
     <div class="navbar-top__accessibility-menu">
       <app-accessibility-menu></app-accessibility-menu>
     </div>
@@ -43,8 +41,10 @@
 </nav>
 @if (isMobileLayout && showMenu) {
   <div [@InOutAnimation]="showMenu" class="mobile-menu">
-    test
-    <div class="navbar-top__accessibility-menu">
+    <div class="mobile-menu__item-group">
+      <a [routerLink]="['oferta']" class="item-group__item"> Oferta </a>
+    </div>
+    <div class="mobile-menu__accessibility-menu">
       <app-accessibility-menu></app-accessibility-menu>
     </div>
   </div>

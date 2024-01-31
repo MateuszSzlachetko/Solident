@@ -25,3 +25,9 @@
   align-self: center;
   filter: var(--logo);
 }
+
+@media screen and (max-width: 599.8px) {
+  .accessibility-menu {
+    flex-direction: column;
+  }
+}

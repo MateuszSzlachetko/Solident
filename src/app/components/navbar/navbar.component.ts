@@ -1,8 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AsyncPipe, NgClass, NgIf, NgOptimizedImage } from '@angular/common';
-import { ThemeService } from '../../core/services/theme.service';
-import { Theme } from '../../core/interfaces/theme';
 import { Observable } from 'rxjs';
 import {
   BreakpointObserver,
@@ -49,18 +47,26 @@ const InOutAnimation = trigger('InOutAnimation', [
   styleUrl: './navbar.component.scss',
   animations: [InOutAnimation],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   breakpointObserver: BreakpointObserver = inject(BreakpointObserver);
   layoutChanges: Observable<BreakpointState> = this.breakpointObserver.observe([
     Breakpoints.XSmall,
   ]);
   showMenu: boolean = false;
   isMobileLayout: boolean = false;
+  isDesktopLayout: boolean = false;
 
-  ngOnInit() {
+  constructor() {
     this.layoutChanges.subscribe((state) => {
-      if (state.matches) this.isMobileLayout = true;
-      if (!state.matches) this.isMobileLayout = false;
+      if (state.matches) {
+        this.isMobileLayout = true;
+        this.isDesktopLayout = false;
+      }
+
+      if (!state.matches) {
+        this.isMobileLayout = false;
+        this.isDesktopLayout = true;
+      }
     });
   }
 
