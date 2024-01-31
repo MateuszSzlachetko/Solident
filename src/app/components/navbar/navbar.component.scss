@@ -45,32 +45,11 @@ $navbar-height: 60px;
   font-size: 1rem;
 }
 
-.navbar-top__settings-menu {
+.navbar-top__accessibility-menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(var(--text-rgb), 0.2);
-  border-radius: 0.5rem;
   flex: 2;
-}
-
-.settings-menu__button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.settings-menu__icon {
-  align-self: center;
-  filter: var(--logo);
 }
 
 .navbar-top__burger-menu {

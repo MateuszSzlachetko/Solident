@@ -1,54 +1,51 @@
 <nav class="navbar-top">
   <a [routerLink]="['']" class="navbar-top__logo">
-    <img class="navbar-top__logo-icon" ngSrc="assets/tooth.svg" alt="logo" height="32" width="32">
+    <img
+      class="navbar-top__logo-icon"
+      ngSrc="assets/tooth.svg"
+      alt="logo"
+      height="32"
+      width="32"
+    />
     Solident
   </a>
 
-  @if(!isMobileLayout){
+  @if (!isMobileLayout) {
     <ul class="nav-item-group">
       <li class="nav-item">
-        <a>
-          Test
-        </a>
+        <a> Test </a>
       </li>
       <li class="nav-item">
-        <a>
-          Test
-        </a>
+        <a> Test </a>
       </li>
     </ul>
 
-    <div class="navbar-top__settings-menu">
-      <!--    @if (theme$ |async; as theme) {-->
-      <!--      <button aria-label="">-->
-      <!--        <img [ngSrc]="theme.iconPath" alt="zmiana motywu" height="24" width="24">-->
-      <!--      </button>-->
-      <!--    }-->
-
-      <button *ngIf="theme$ | async as theme" aria-label="Przycisk do zmiany motywu" class="settings-menu__button"
-              (click)="toggleTheme()">
-        <img class="settings-menu__icon" [ngSrc]="theme.iconPath" alt="ikona motywu" height="24" width="24">
-      </button>
-      <button aria-label="Przycisk do zmiany motywu na kontrastowy" class="settings-menu__button"
-              (click)="toggleHighContrastMode()">
-        <img class="settings-menu__icon" ngSrc="assets/contrast-mode-icon.svg" alt="ikona kontrastu" height="24"
-             width="24">
-      </button>
+    <div class="navbar-top__accessibility-menu">
+      <app-accessibility-menu></app-accessibility-menu>
     </div>
   }
 
-  @if (isMobileLayout){
-    <div [ngClass]="showMenu ? 'show-menu navbar-top__burger-menu' : 'navbar-top__burger-menu'"
-         (click)="toggleMenu()"
-         aria-label="Rozwijane menu stron">
+  @if (isMobileLayout) {
+    <div
+      [ngClass]="
+        showMenu
+          ? 'show-menu navbar-top__burger-menu'
+          : 'navbar-top__burger-menu'
+      "
+      (click)="toggleMenu()"
+      aria-label="Rozwijane menu stron"
+    >
       <span></span>
       <span></span>
       <span></span>
     </div>
   }
 </nav>
-@if (isMobileLayout && showMenu){
+@if (isMobileLayout && showMenu) {
   <div [@InOutAnimation]="showMenu" class="mobile-menu">
     test
+    <div class="navbar-top__accessibility-menu">
+      <app-accessibility-menu></app-accessibility-menu>
+    </div>
   </div>
 }

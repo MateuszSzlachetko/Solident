@@ -1,0 +1,27 @@
+.accessibility-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(var(--text-rgb), 0.2);
+  border-radius: 8px;
+  flex: 2;
+}
+
+.accessibility-menu__button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.accessibility-menu__icon {
+  align-self: center;
+  filter: var(--logo);
+}
