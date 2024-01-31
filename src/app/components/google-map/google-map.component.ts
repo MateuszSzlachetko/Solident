@@ -22,6 +22,9 @@ const GOOGLE_MAPS_CONFIG = {
     address2: 'Opole, Poland',
     coords: { lat: 50.6812918, lng: 17.9332711 },
     placeId: 'ChIJ4RhXXa5TEEcReDGy2T1buqk',
+    options: {
+      animation: 4.0,
+    },
   },
 };
 
