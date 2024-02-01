@@ -19,8 +19,9 @@ export const appConfig: ApplicationConfig = {
     {
       provide: IMAGE_LOADER,
       useValue: (config: ImageLoaderConfig) => {
-        if (config.src.endsWith('jpg')) return `${config.src}${config.width}`;
-
+        if (config.src.endsWith('webp') && config.width) {
+          return `${config.src.slice(0, -5)}${config.width}.webp`;
+        }
         return `${config.src}`;
       },
     },
