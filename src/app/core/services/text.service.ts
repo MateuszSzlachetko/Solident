@@ -1,8 +1,4 @@
-import { afterNextRender, Injectable } from '@angular/core';
-import { Theme, themes } from '../interfaces/theme';
-import { BehaviorSubject } from 'rxjs';
-
-const HIGH_CONTRAST_CLASS_NAME: string = 'contrast-mode';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -11,10 +7,6 @@ export class TextService {
   textSize: number = 16;
   minTextSize: number = 14;
   maxTextSize: number = 18;
-
-  constructor() {
-    afterNextRender(() => {});
-  }
 
   decreaseTextSize() {
     if (this.textSize <= this.minTextSize) return;

@@ -1,8 +1,7 @@
 <div class="home">
   <div class="home__welcome">
     <img
-      ngSrc="assets/a.jpg"
-      ngSrcset="500w, 1000w"
+      ngSrc="assets/a20.jpg"
       fill
       priority
       sizes="100vw"
@@ -73,7 +72,11 @@
       </div>
     </div>
     <div class="contact__map">
-      <app-google-map></app-google-map>
+      @defer (on viewport) {
+        <app-google-map></app-google-map>
+      } @placeholder (minimum 1s) {
+        <p>loading</p>
+      }
     </div>
   </section>
 </div>
