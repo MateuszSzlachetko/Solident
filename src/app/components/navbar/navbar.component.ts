@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { afterNextRender, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AsyncPipe, NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -54,19 +54,19 @@ export class NavbarComponent {
   ]);
   showMenu: boolean = false;
   isMobileLayout: boolean = false;
-  isDesktopLayout: boolean = false;
 
   constructor() {
-    this.layoutChanges.subscribe((state) => {
-      if (state.matches) {
-        this.isMobileLayout = true;
-        this.isDesktopLayout = false;
-      }
+    afterNextRender(() => {
+      this.layoutChanges.subscribe((state) => {
+        if (state.matches) {
+          this.isMobileLayout = true;
+        }
 
-      if (!state.matches) {
-        this.isMobileLayout = false;
-        this.isDesktopLayout = true;
-      }
+        if (!state.matches) {
+          this.isMobileLayout = false;
+          this.showMenu = false;
+        }
+      });
     });
   }
 

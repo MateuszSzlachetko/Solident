@@ -56,13 +56,13 @@ $navbar-height: 60px;
 .navbar-top__burger-menu {
   width: 42px;
   height: 42px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   padding: 0.5rem;
   flex: initial;
+  display: none;
 }
 
 .navbar-top__burger-menu span {
@@ -171,5 +171,9 @@ $navbar-height: 60px;
 
   .navbar-top__accessibility-menu {
     display: none;
+  }
+
+  .navbar-top__burger-menu {
+    display: flex;
   }
 }

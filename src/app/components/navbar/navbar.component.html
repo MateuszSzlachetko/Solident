@@ -6,38 +6,34 @@
       alt="logo"
       height="32"
       width="32"
+      priority
     />
     Solident
   </a>
-  @if (isDesktopLayout) {
-    <ul class="nav-item-group">
-      <li class="nav-item">
-        <a> Test </a>
-      </li>
-      <li class="nav-item">
-        <a> Test </a>
-      </li>
-    </ul>
-    <div class="navbar-top__accessibility-menu">
-      <app-accessibility-menu></app-accessibility-menu>
-    </div>
-  }
+  <ul class="nav-item-group">
+    <li class="nav-item">
+      <a> Test </a>
+    </li>
+    <li class="nav-item">
+      <a> Test </a>
+    </li>
+  </ul>
+  <div class="navbar-top__accessibility-menu">
+    <app-accessibility-menu></app-accessibility-menu>
+  </div>
 
-  @if (isMobileLayout) {
-    <div
-      [ngClass]="
-        showMenu
-          ? 'show-menu navbar-top__burger-menu'
-          : 'navbar-top__burger-menu'
-      "
-      (click)="toggleMenu()"
-      aria-label="Rozwijane menu stron"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  }
+  <div
+    [ngClass]="
+      showMenu ? 'show-menu navbar-top__burger-menu' : 'navbar-top__burger-menu'
+    "
+    (click)="toggleMenu()"
+    role="button"
+    aria-label="Rozwijane menu stron"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
 @if (isMobileLayout && showMenu) {
   <div [@InOutAnimation]="showMenu" class="mobile-menu">
